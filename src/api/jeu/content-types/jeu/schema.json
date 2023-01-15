@@ -4,7 +4,8 @@
   "info": {
     "singularName": "jeu",
     "pluralName": "jeux",
-    "displayName": "Jeu"
+    "displayName": "Jeu",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -23,6 +24,24 @@
       },
       "type": "string",
       "required": true
+    },
+    "Editeurs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::editeur.editeur",
+      "inversedBy": "Jeux"
+    },
+    "Creation": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gen-qui.gen-qui",
+      "inversedBy": "Jeux"
+    },
+    "Illustration": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gen-qui.gen-qui",
+      "inversedBy": "Jeux"
     }
   }
 }

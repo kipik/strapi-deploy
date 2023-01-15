@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editeurs",
+  "info": {
+    "singularName": "editeur",
+    "pluralName": "editeurs",
+    "displayName": "Editeur"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Jeux": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jeu.jeu",
+      "mappedBy": "Editeurs"
+    }
+  }
+}

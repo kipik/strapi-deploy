@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gens_qui",
+  "info": {
+    "singularName": "gen-qui",
+    "pluralName": "gens-qui",
+    "displayName": "Gens_qui"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    },
+    "Prenom": {
+      "type": "string",
+      "required": true
+    },
+    "Jeux": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jeu.jeu",
+      "mappedBy": "Illustration"
+    }
+  }
+}
