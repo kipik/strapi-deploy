@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_version_versions",
+  "info": {
+    "displayName": "Version"
+  },
+  "options": {},
+  "attributes": {
+    "version_name": {
+      "type": "string",
+      "required": true
+    },
+    "primary": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
