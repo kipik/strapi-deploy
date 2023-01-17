@@ -1,17 +1,48 @@
 {
   "collectionName": "components_version_versions",
   "info": {
-    "displayName": "Version"
+    "displayName": "Version",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "version_name": {
+    "Titre": {
       "type": "string",
       "required": true
     },
-    "primary": {
+    "principal": {
       "type": "boolean",
       "default": true
+    },
+    "Langue": {
+      "type": "enumeration",
+      "enum": [
+        "Français",
+        "Anglais",
+        "Allemand",
+        "Espagnol",
+        "Russe",
+        "Hollandais"
+      ],
+      "default": "Français"
+    },
+    "Edition": {
+      "type": "enumeration",
+      "enum": [
+        "Première",
+        "Seconde",
+        "Troisième",
+        "Quatrième",
+        "Cinquième",
+        "Sixième",
+        "Septième"
+      ],
+      "default": "Première"
+    },
+    "Editeurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::editeur.editeur"
     }
   }
 }

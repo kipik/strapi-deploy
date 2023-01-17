@@ -24,6 +24,12 @@
       "relation": "manyToMany",
       "target": "api::jeu.jeu",
       "mappedBy": "Illustration"
+    },
+    "games": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game.game",
+      "mappedBy": "boardgamedesigners"
     }
   }
 }
