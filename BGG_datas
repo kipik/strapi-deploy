@@ -1,0 +1,299 @@
+[
+  {
+    "boardgames": {
+      "boardgame": {
+        "objectid": "311193",
+        "yearpublished": "2020",
+        "minplayers": "2",
+        "maxplayers": "4",
+        "playingtime": "120",
+        "minplaytime": "120",
+        "maxplaytime": "120",
+        "age": "12",
+        "name": {
+          "_": "Anno 1800",
+          "primary": "true",
+          "sortindex": "1"
+        },
+        "description": "In Anno 1800, a board game based on the popular PC game from Ubisoft, you continuously build up your own industry to develop your home island.<br/><br/>Ship fleets allow for lively trade and the development of new islands in the Old and New World. You have to fulfill the wishes of your own population. While the inhabitants are initially satisfied with bread and clothing, they soon demand valuable luxury goods. You must plan production chains sensibly and keep an eye on the specialization of your population. The goal: A wise distribution of farmers, workers, craftsmen, engineers, and investors &mdash; but the competition never sleeps and can snatch the new achievements from under your nose at any time! Who can create the most prosperous island?<br/><br/>&mdash;description from the publisher (translated)<br/><br/>",
+        "thumbnail": "https://cf.geekdo-images.com/B21RQfIBnt2A_CYq8iZvrg__thumb/img/CtIlRyLdXN0b3TC8nM_8KZCrlN8=/fit-in/200x150/filters:strip_icc()/pic6220821.jpg",
+        "image": "https://cf.geekdo-images.com/B21RQfIBnt2A_CYq8iZvrg__original/img/UXIVL5GrcjSmLRQwjCa-8fviulU=/0x0/filters:format(jpeg)/pic6220821.jpg",
+        "boardgamepublisher": [
+          {
+            "_": "KOSMOS",
+            "objectid": "37"
+          },
+          {
+            "_": "IELLO",
+            "objectid": "8923"
+          }
+        ],
+        "boardgamepodcastepisode": [
+          {
+            "_": "Bonusepisode: Børn og brætspil",
+            "objectid": "408885"
+          }
+        ],
+        "boardgamehonor": [
+          {
+            "_": "2021 Cardboard Republic Architect Laurel Nominee",
+            "objectid": "75638"
+          }
+        ],
+        "videogamebg": {
+          "_": "Anno 1800",
+          "objectid": "233999"
+        },
+        "boardgameexpansion": [
+          {
+            "_": "Anno 1800: Der Solo-Modus",
+            "objectid": "377613"
+          }
+        ],
+        "boardgameaccessory": {
+          "_": "Anno 1800: Eurohell Design Insert",
+          "objectid": "349937"
+        },
+        "boardgamecategory": [
+          {
+            "_": "Card Game",
+            "objectid": "1002"
+          }
+        ],
+        "boardgameversion": [
+          {
+            "_": "English edition",
+            "objectid": "544992"
+          },
+          {
+            "_": "French edition",
+            "objectid": "568851"
+          },
+          {
+            "_": "German edition, first printing",
+            "objectid": "511216"
+          },
+          {
+            "_": "German edition, second printing",
+            "objectid": "644863"
+          }
+        ],
+        "boardgamemechanic": [
+          {
+            "_": "End Game Bonuses",
+            "objectid": "2875"
+          }
+        ],
+        "boardgameartist": {
+          "_": "Fiore GmbH",
+          "objectid": "61842"
+        },
+        "commerceweblink": {
+          "_": "Geek Game Shop listing for Anno 1800",
+          "objectid": "311767"
+        },
+        "boardgamefamily": {
+          "_": "History: Industrial Revolution",
+          "objectid": "50152"
+        },
+        "boardgamesolodesigner": {
+          "_": "Stephen Hurn",
+          "objectid": "147127"
+        },
+        "boardgamesubdomain": {
+          "_": "Strategy Games",
+          "objectid": "5497"
+        },
+        "boardgamedesigner": {
+          "_": "Martin Wallace",
+          "objectid": "6"
+        },
+        "poll": [
+          {
+            "name": "suggested_numplayers",
+            "title": "User Suggested Number of Players",
+            "totalvotes": "120",
+            "results": [
+              {
+                "numplayers": "1",
+                "result": [
+                  {
+                    "value": "Best",
+                    "numvotes": "2"
+                  },
+                  {
+                    "value": "Recommended",
+                    "numvotes": "16"
+                  },
+                  {
+                    "value": "Not Recommended",
+                    "numvotes": "45"
+                  }
+                ]
+              },
+              {
+                "numplayers": "2",
+                "result": [
+                  {
+                    "value": "Best",
+                    "numvotes": "25"
+                  },
+                  {
+                    "value": "Recommended",
+                    "numvotes": "62"
+                  },
+                  {
+                    "value": "Not Recommended",
+                    "numvotes": "13"
+                  }
+                ]
+              },
+              {
+                "numplayers": "3",
+                "result": [
+                  {
+                    "value": "Best",
+                    "numvotes": "74"
+                  },
+                  {
+                    "value": "Recommended",
+                    "numvotes": "21"
+                  },
+                  {
+                    "value": "Not Recommended",
+                    "numvotes": "3"
+                  }
+                ]
+              },
+              {
+                "numplayers": "4",
+                "result": [
+                  {
+                    "value": "Best",
+                    "numvotes": "17"
+                  },
+                  {
+                    "value": "Recommended",
+                    "numvotes": "54"
+                  },
+                  {
+                    "value": "Not Recommended",
+                    "numvotes": "20"
+                  }
+                ]
+              },
+              {
+                "numplayers": "4+",
+                "result": [
+                  {
+                    "value": "Best",
+                    "numvotes": "0"
+                  },
+                  {
+                    "value": "Recommended",
+                    "numvotes": "1"
+                  },
+                  {
+                    "value": "Not Recommended",
+                    "numvotes": "48"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "language_dependence",
+            "title": "Language Dependence",
+            "totalvotes": "13",
+            "results": {
+              "result": [
+                {
+                  "level": "1",
+                  "value": "No necessary in-game text",
+                  "numvotes": "7"
+                },
+                {
+                  "level": "2",
+                  "value": "Some necessary text - easily memorized or small crib sheet",
+                  "numvotes": "5"
+                },
+                {
+                  "level": "3",
+                  "value": "Moderate in-game text - needs crib sheet or paste ups",
+                  "numvotes": "1"
+                },
+                {
+                  "level": "4",
+                  "value": "Extensive use of text - massive conversion needed to be playable",
+                  "numvotes": "0"
+                },
+                {
+                  "level": "5",
+                  "value": "Unplayable in another language",
+                  "numvotes": "0"
+                }
+              ]
+            }
+          },
+          {
+            "name": "suggested_playerage",
+            "title": "User Suggested Player Age",
+            "totalvotes": "14",
+            "results": {
+              "result": [
+                {
+                  "value": "2",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "3",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "4",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "5",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "6",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "8",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "10",
+                  "numvotes": "6"
+                },
+                {
+                  "value": "12",
+                  "numvotes": "7"
+                },
+                {
+                  "value": "14",
+                  "numvotes": "1"
+                },
+                {
+                  "value": "16",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "18",
+                  "numvotes": "0"
+                },
+                {
+                  "value": "21 and up",
+                  "numvotes": "0"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+]
