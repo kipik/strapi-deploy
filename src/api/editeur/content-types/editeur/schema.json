@@ -15,12 +15,6 @@
       "type": "string",
       "unique": true,
       "required": true
-    },
-    "Jeux": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::jeu.jeu",
-      "mappedBy": "Editeurs"
     }
   }
 }
