@@ -26,15 +26,7 @@
       },
       "component": "version.version"
     },
-    "yearpublish": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer"
-    },
-    "minplayers": {
+    "minPlayers": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -44,7 +36,7 @@
       "default": 2,
       "min": 0
     },
-    "maxplayers": {
+    "maxPlayers": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -52,7 +44,7 @@
       },
       "type": "integer"
     },
-    "playingtime": {
+    "playingTime": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -61,7 +53,7 @@
       "type": "integer",
       "min": 1
     },
-    "minplaytime": {
+    "minPlaytime": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -70,7 +62,7 @@
       "type": "integer",
       "min": 1
     },
-    "maxplaytime": {
+    "maxPlaytime": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -78,7 +70,7 @@
       },
       "type": "integer"
     },
-    "age": {
+    "minAge": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -95,43 +87,65 @@
       },
       "type": "richtext"
     },
-    "thumbnail": {
+    "images": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"
       ],
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gen-qui.gen-qui",
+      "inversedBy": "games"
+    },
+    "types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::type.type",
+      "inversedBy": "games"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categorie.categorie",
+      "inversedBy": "games"
+    },
+    "mecanismes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mecanisme.mecanisme",
+      "inversedBy": "games"
+    },
+    "caption": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "richtext"
     },
-    "boardgameartists": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::gen-qui.gen-qui",
-      "inversedBy": "games"
+    "complexity": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "max": 10,
+      "min": 1
     },
-    "boardgamedesigners": {
+    "extension_de": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::gen-qui.gen-qui",
-      "inversedBy": "games"
+      "relation": "oneToOne",
+      "target": "api::game.game"
     }
   }
 }

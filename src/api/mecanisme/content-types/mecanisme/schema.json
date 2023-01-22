@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mecanismes",
+  "info": {
+    "singularName": "mecanisme",
+    "pluralName": "mecanismes",
+    "displayName": "Mécanisme"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "games": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game.game",
+      "mappedBy": "mecanismes"
+    }
+  }
+}
