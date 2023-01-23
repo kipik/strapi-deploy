@@ -23,7 +23,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::game.game",
-      "mappedBy": "boardgamedesigners"
+      "mappedBy": "authors"
     }
   }
 }

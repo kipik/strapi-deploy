@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "types",
+  "info": {
+    "singularName": "type",
+    "pluralName": "types",
+    "displayName": "Type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "games": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game.game",
+      "mappedBy": "types"
+    }
+  }
+}

@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Titre": {
+    "title": {
       "type": "string",
       "required": true
     },
@@ -14,7 +14,7 @@
       "type": "boolean",
       "default": true
     },
-    "Langue": {
+    "language": {
       "type": "enumeration",
       "enum": [
         "Français",
@@ -26,7 +26,7 @@
       ],
       "default": "Français"
     },
-    "Edition": {
+    "edition": {
       "type": "enumeration",
       "enum": [
         "Première",
@@ -39,10 +39,26 @@
       ],
       "default": "Première"
     },
-    "Editeurs": {
+    "editors": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::editeur.editeur"
+    },
+    "boxPicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "yearPublished": {
+      "type": "integer"
+    },
+    "illustrateurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gen-qui.gen-qui"
     }
   }
 }
