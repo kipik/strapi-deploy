@@ -19,11 +19,17 @@
       "type": "string",
       "required": true
     },
-    "games": {
+    "games_created": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::game.game",
       "mappedBy": "authors"
+    },
+    "games_illustrated": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game.game",
+      "mappedBy": "illustrateurs"
     }
   }
 }

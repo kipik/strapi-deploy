@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_liens_forums",
+  "info": {
+    "displayName": "Forum"
+  },
+  "options": {},
+  "attributes": {
+    "discourses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discourse.discourse"
+    }
+  }
+}

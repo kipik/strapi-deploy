@@ -16,16 +16,6 @@
     }
   },
   "attributes": {
-    "Versions": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "version.version"
-    },
     "minPlayers": {
       "pluginOptions": {
         "i18n": {
@@ -104,7 +94,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::gen-qui.gen-qui",
-      "inversedBy": "games"
+      "inversedBy": "games_created"
     },
     "types": {
       "type": "relation",
@@ -124,14 +114,6 @@
       "target": "api::mecanisme.mecanisme",
       "inversedBy": "games"
     },
-    "caption": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
     "complexity": {
       "pluginOptions": {
         "i18n": {
@@ -144,8 +126,15 @@
     },
     "extension_de": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::game.game"
+      "relation": "manyToOne",
+      "target": "api::game.game",
+      "inversedBy": "Extensions"
+    },
+    "Extensions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::game.game",
+      "mappedBy": "extension_de"
     },
     "Titre": {
       "pluginOptions": {
@@ -156,6 +145,92 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "illustrateurs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gen-qui.gen-qui",
+      "inversedBy": "games_illustrated"
+    },
+    "mainVersion": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
+    },
+    "language": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Français",
+        "Anglais",
+        "Allemand",
+        "Espagnol",
+        "Russe",
+        "Hollandais"
+      ],
+      "default": "Français"
+    },
+    "version": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "editors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::editeur.editeur",
+      "inversedBy": "games"
+    },
+    "img_box": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "yearPublished": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "caption": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "maxLength": 240
+    },
+    "forum_links": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "liens.forum"
     }
   }
 }

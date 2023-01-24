@@ -6,14 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "principal": {
-      "type": "boolean",
-      "default": true
-    },
     "language": {
       "type": "enumeration",
       "enum": [
