@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_internes_gens",
+  "info": {
+    "displayName": "Gens"
+  },
+  "options": {},
+  "attributes": {
+    "gens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gen-qui.gen-qui"
+    }
+  }
+}

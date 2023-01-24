@@ -51,6 +51,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::gen-qui.gen-qui"
+    },
+    "auteurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gen-qui.gen-qui"
     }
   }
 }

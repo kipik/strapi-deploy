@@ -231,6 +231,28 @@
         }
       },
       "component": "liens.forum"
+    },
+    "Version": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "version.version"
+      ]
+    },
+    "Casting": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "internes.gens"
+      ]
     }
   }
 }
