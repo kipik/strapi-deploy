@@ -102,12 +102,6 @@
       "target": "api::type.type",
       "inversedBy": "games"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categorie.categorie",
-      "inversedBy": "games"
-    },
     "mecanismes": {
       "type": "relation",
       "relation": "manyToMany",
