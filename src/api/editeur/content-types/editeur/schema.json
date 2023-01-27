@@ -4,14 +4,15 @@
   "info": {
     "singularName": "editeur",
     "pluralName": "editeurs",
-    "displayName": "Editeur"
+    "displayName": "Editeur",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "Nom": {
+    "title": {
       "type": "string",
       "unique": true,
       "required": true
@@ -21,6 +22,10 @@
       "relation": "manyToMany",
       "target": "api::game.game",
       "mappedBy": "editors"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

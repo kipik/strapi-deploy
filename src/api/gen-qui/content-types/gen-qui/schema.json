@@ -4,18 +4,19 @@
   "info": {
     "singularName": "gen-qui",
     "pluralName": "gens-qui",
-    "displayName": "Gens_qui"
+    "displayName": "Gens_qui",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Nom": {
+    "nom": {
       "type": "string",
       "required": true
     },
-    "Prenom": {
+    "prenom": {
       "type": "string",
       "required": true
     },
@@ -29,7 +30,10 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::game.game",
-      "mappedBy": "illustrateurs"
+      "mappedBy": "illustrators"
+    },
+    "slug": {
+      "type": "uid"
     }
   }
 }

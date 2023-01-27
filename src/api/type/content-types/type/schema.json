@@ -4,14 +4,15 @@
   "info": {
     "singularName": "type",
     "pluralName": "types",
-    "displayName": "Type"
+    "displayName": "Type",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "nom": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true
@@ -21,6 +22,10 @@
       "relation": "manyToMany",
       "target": "api::game.game",
       "mappedBy": "types"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

@@ -4,14 +4,15 @@
   "info": {
     "singularName": "mecanisme",
     "pluralName": "mecanismes",
-    "displayName": "Mécanisme"
+    "displayName": "Mécanisme",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "nom": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true
@@ -20,7 +21,11 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::game.game",
-      "mappedBy": "mecanismes"
+      "mappedBy": "mecanisms"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

@@ -102,7 +102,7 @@
       "target": "api::type.type",
       "inversedBy": "games"
     },
-    "mecanismes": {
+    "mecanisms": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::mecanisme.mecanisme",
@@ -118,19 +118,19 @@
       "max": 10,
       "min": 1
     },
-    "extension_de": {
+    "expansion_for": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::game.game",
-      "inversedBy": "Extensions"
+      "inversedBy": "expansions"
     },
-    "Extensions": {
+    "expansions": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::game.game",
-      "mappedBy": "extension_de"
+      "mappedBy": "expansion_for"
     },
-    "Titre": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -140,7 +140,7 @@
       "required": true,
       "unique": true
     },
-    "illustrateurs": {
+    "illustrators": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::gen-qui.gen-qui",
@@ -247,6 +247,15 @@
       "components": [
         "internes.gens"
       ]
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

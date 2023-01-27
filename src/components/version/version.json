@@ -47,7 +47,7 @@
     "yearPublished": {
       "type": "integer"
     },
-    "illustrateurs": {
+    "illustrators": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::gen-qui.gen-qui"
