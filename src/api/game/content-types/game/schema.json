@@ -98,15 +98,13 @@
     },
     "types": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::type.type",
-      "inversedBy": "games"
+      "relation": "oneToMany",
+      "target": "api::type.type"
     },
     "mecanisms": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::mecanisme.mecanisme",
-      "inversedBy": "games"
+      "relation": "oneToMany",
+      "target": "api::mecanisme.mecanisme"
     },
     "complexity": {
       "pluginOptions": {
@@ -142,9 +140,8 @@
     },
     "illustrators": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::gen-qui.gen-qui",
-      "inversedBy": "games_illustrated"
+      "relation": "oneToMany",
+      "target": "api::gen-qui.gen-qui"
     },
     "mainVersion": {
       "pluginOptions": {
@@ -182,9 +179,8 @@
     },
     "editors": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::editeur.editeur",
-      "inversedBy": "games"
+      "relation": "oneToMany",
+      "target": "api::editeur.editeur"
     },
     "img_box": {
       "type": "media",

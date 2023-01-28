@@ -39,12 +39,6 @@
       "target": "api::category.category",
       "mappedBy": "parent"
     },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "categories"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {

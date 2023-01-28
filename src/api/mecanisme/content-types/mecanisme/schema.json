@@ -17,12 +17,6 @@
       "required": true,
       "unique": true
     },
-    "games": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::game.game",
-      "mappedBy": "mecanisms"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"

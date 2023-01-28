@@ -27,12 +27,6 @@
       "maxLength": 32,
       "unique": true
     },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "tags"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
