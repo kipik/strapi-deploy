@@ -118,6 +118,16 @@
       },
       "type": "uid",
       "targetField": "title"
+    },
+    "postSEO": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo-information"
     }
   }
 }
