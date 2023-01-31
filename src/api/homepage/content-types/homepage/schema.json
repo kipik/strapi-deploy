@@ -46,27 +46,18 @@
       },
       "component": "layout.hero-section"
     },
-    "blogCarousel": {
-      "displayName": "postSelection",
-      "type": "component",
-      "repeatable": false,
+    "topPageFeatureSelection": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "blog.post-selection"
-    },
-    "featuredPost": {
-      "displayName": "Featured Post",
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "blog.featured-post"
+      "type": "dynamiczone",
+      "components": [
+        "blog.featured-post",
+        "blog.post-selection"
+      ],
+      "required": true
     }
   }
 }
