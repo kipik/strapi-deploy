@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homepages",
+  "collectionName": "bases_des_jeux",
   "info": {
-    "singularName": "homepage",
-    "pluralName": "homepages",
-    "displayName": "Homepage",
+    "singularName": "base-des-jeux",
+    "pluralName": "bases-des-jeux",
+    "displayName": "Base des jeux",
     "description": ""
   },
   "options": {
@@ -23,10 +23,24 @@
         }
       },
       "type": "string",
-      "default": "Cwowd, communauté joueuse et participative",
       "required": true
     },
-    "homepageHero": {
+    "excludedTypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::type.type"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
+    },
+    "pageInfo": {
+      "displayName": "Page Info",
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
@@ -34,30 +48,7 @@
           "localized": true
         }
       },
-      "component": "layout.hero-section"
-    },
-    "topPageFeatureSelection": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "dynamiczone",
-      "components": [
-        "blog.featured-post",
-        "blog.post-selection"
-      ],
-      "required": true
-    },
-    "SEO": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo"
+      "component": "blog.page-info"
     }
   }
 }

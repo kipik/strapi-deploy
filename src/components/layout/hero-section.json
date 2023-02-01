@@ -1,27 +1,23 @@
 {
   "collectionName": "components_layout_hero_sections",
   "info": {
-    "displayName": "Hero Section"
+    "displayName": "Hero Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "images": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "callToAction": {
-      "type": "string",
-      "required": true
-    },
-    "Buttons": {
-      "displayName": "Button",
+    "call2action": {
       "type": "component",
-      "repeatable": true,
-      "component": "layout.button"
+      "repeatable": false,
+      "component": "liens.link"
     }
   }
 }
