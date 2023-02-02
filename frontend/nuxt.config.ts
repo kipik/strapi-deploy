@@ -1,12 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-// import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from 'nuxt'
 
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/strapi'
 ],
+  css: ['vuetify/lib/styles/main.sass'],
+  build: {
+    transpile: ['vuetify'],
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+},
   apollo: {
     clients: {
       default: {
@@ -20,5 +29,7 @@ export default defineNuxtConfig({
     version: 'v4',
     cookie: {},
     cookieName: 'strapi_jwt'
-    }
+    },
+    buildModules: [
+      '@nuxtjs/vuetify']
 })
