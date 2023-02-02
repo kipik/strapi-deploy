@@ -1,13 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { defineNuxtConfig } from 'nuxt'
+// import { defineNuxtConfig } from 'nuxt'
 
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/strapi'
 ],
-  css: ['vuetify/lib/styles/main.sass'],
+  css: [
+    'vuetify/lib/styles/main.sass',
+    // '@mdi/font/css/materialdesignicons.min.css'
+  ],
   build: {
     transpile: ['vuetify'],
   },
