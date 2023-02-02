@@ -1,0 +1,19 @@
+# Write your query or mutation here
+query {
+  posts {
+    data {
+      id
+      attributes {
+        title
+        body
+        feature_image {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

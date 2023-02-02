@@ -1,0 +1,21 @@
+query Categories {
+  categories {
+    data {
+      id
+      attributes {
+        slug
+        title
+        parent {
+          data {
+            id
+          }
+        }
+        children {
+          data {
+            id
+          }
+        }
+      }
+    }
+  }
+}
