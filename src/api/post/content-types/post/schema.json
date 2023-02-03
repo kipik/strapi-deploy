@@ -36,14 +36,6 @@
       "relation": "oneToMany",
       "target": "api::tag.tag"
     },
-    "excerpt": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "body": {
       "pluginOptions": {
         "i18n": {
@@ -128,6 +120,14 @@
         }
       },
       "component": "shared.seo"
+    },
+    "excerpt": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

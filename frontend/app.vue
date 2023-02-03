@@ -27,7 +27,7 @@
           </template> 
         </v-app-bar>
 
-        <v-main>
+        <v-main class="bg-grey-lighten-4">
           <v-container fluid>
             
             <v-card class="mb-16">
@@ -57,7 +57,7 @@
             </v-card>
 
             <v-row dense class="posts_grid" v-for="post in response.data" :key="post.id">
-                <v-card class="mb-6 bg-grey-lighten-4">
+                <v-card class="mb-6 bg-grey-lighten-6">
                   <div class="card-grid">
                     <div>
                       <v-card-title class="text-wrap text-h6">
