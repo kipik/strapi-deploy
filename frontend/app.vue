@@ -29,28 +29,50 @@
 
         <v-main>
           <v-container fluid>
+            
+            <v-card class="mb-16">
+              <v-carousel 
+                hide-delimiters
+                cycle
+                show-arrows="hover"
+                height="300"
+                progress="primary"
+              >
+                <v-carousel-item
+                  v-for="post in response.data" :key="post.id"
+                >
+                  <v-sheet
+                    src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
+                    height="100%"
+                    cover
+                  >
+                    <div class="d-flex fill-height justify-center align-center">
+                      <div class="text-h4">
+                        {{ post.attributes.title }}
+                      </div>
+                    </div>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+            </v-card>
+
             <v-row dense class="posts_grid" v-for="post in response.data" :key="post.id">
-               <!-- <div>  -->
-                <v-card>
+                <v-card class="mb-6 bg-grey-lighten-4">
                   <div class="card-grid">
                     <div>
-                      <v-card-title class="text-wrap">
+                      <v-card-title class="text-wrap text-h6">
                         {{ post.attributes.title }}
                       </v-card-title>
 
-                      <v-card-subtitle class="text-wrap">
-                        {{ post.attributes.excerpt }}
-                      </v-card-subtitle>
-
                       <v-card-actions>
-                        <v-btn color="primary" class="ms-2" size="x-small" variant="text">Plus d'infos</v-btn>
+                        <v-btn color="primary" class="ms-2" size="x-small" variant="tonal">Plus d'infos</v-btn>
                         <v-btn color="primary" class="ms-2" size="x-small" variant="outlined">On en discute</v-btn>
                       </v-card-actions>
                     </div>  
                     
                     <v-avatar
                       class="ma-3"
-                      size="120"
+                      size="75"
                       rounded="0"
                     >
                       <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
@@ -59,7 +81,6 @@
                     </v-avatar>
                   </div>  
                 </v-card>
-              <!-- </div> -->
             </v-row>
           </v-container>
         </v-main>
@@ -98,17 +119,27 @@ const response = await find<Post>('posts')
   gap: 20px 0;
   margin: 0;
   padding: 0;
-  row-gap: 20px;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: space-between;
-  align-content: space-between;
 }
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 120px;
-  justify-items: stretch;
-  align-items: stretch;
-
+  grid-template-columns: 1fr 80px;
+  grid-template-areas:  
+  "title img"
+  "sub img"
+  "actions img";
+}
+.v-card-title {
+  grid-area: title;
+  padding: 0 4px;
+}
+.v-card-subtitle {
+  grid-area: sub;
+}
+.v-card-actions {
+  grid-area: actions;
+  padding: 0;
+}
+.v-avatar {
+  grid-area: img;
 }
 </style>
