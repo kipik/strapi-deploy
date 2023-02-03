@@ -4,7 +4,7 @@
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/apollo',
+    // '@nuxtjs/apollo',
     '@nuxtjs/strapi'
 ],
   css: [
@@ -19,13 +19,13 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
 },
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: 'https://walrus-app-sbjbt.ondigitalocean.app/graphql'
-      }
-    }
-  },
+  // apollo: {
+    // clients: {
+      // default: {
+        // httpEndpoint: 'https://walrus-app-sbjbt.ondigitalocean.app/graphql'
+      // }
+    // }
+  // },
   strapi: {
     url: process.env.STRAPI_URL || 'https://walrus-app-sbjbt.ondigitalocean.app',
     prefix: '/api',
