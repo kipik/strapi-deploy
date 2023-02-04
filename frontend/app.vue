@@ -74,9 +74,8 @@
                       size="75"
                       rounded="0"
                     >
-                      <v-img src="$post.attributes.feature_image.data.attributes.url"
-                      cover
-                      ></v-img>
+                      <!-- <img :src="$post.attributes.feature_image.data.attributes.url" -->
+                      cover />
                     </v-avatar>
                   </div>  
                 </v-card>
@@ -102,11 +101,12 @@ import type { Posts } from '~/types'
 const { find } = useStrapi()
 const response = await find<Post>('posts?populate=*')
 
+console.log(response.data[0].attributes.title)
 // const query = gql`
   // query getPosts($limit: Int!) {
     // posts(limit: $limit) {
       // id
-      // title
+      // title2
     // }
   // }
 // `
