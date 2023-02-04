@@ -41,7 +41,7 @@
                   v-for="post in response.data" :key="post.id"
                 >
                   <v-sheet
-                    src= {{ post.attributes.feature_image.attributes.url }}
+                    src= "https://images-pour-strapi.fra1.digitaloceanspaces.com/Quodd_Heroes_2nd_Edition_par_Wonderment_Games_9a5707a8fb.jpg"
                     height="100%"
                     cover
                   >
@@ -74,7 +74,7 @@
                       size="75"
                       rounded="0"
                     >
-                      <!-- <img :src="$post.attributes.feature_image.data.attributes.url" -->
+                      <img src= "https://images-pour-strapi.fra1.digitaloceanspaces.com/Quodd_Heroes_2nd_Edition_par_Wonderment_Games_9a5707a8fb.jpg"
                       cover />
                     </v-avatar>
                   </div>  
@@ -101,7 +101,7 @@ import type { Posts } from '~/types'
 const { find } = useStrapi()
 const response = await find<Post>('posts?populate=*')
 
-console.log(response.data[0].attributes.title)
+// console.log(response.data[0].attributes.feature_image.attributes.url)
 // const query = gql`
   // query getPosts($limit: Int!) {
     // posts(limit: $limit) {
