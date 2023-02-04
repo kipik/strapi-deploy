@@ -30,7 +30,7 @@
         <v-main class="bg-grey-lighten-4">
           <v-container fluid>
             
-            <v-card class="mb-16">
+            <v-card class="mb-8">
               <v-carousel 
                 hide-delimiters
                 cycle
@@ -42,7 +42,7 @@
                   v-for="post in response.data" :key="post.id"
                 >
                   <v-sheet
-                    src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
+                    src="https://res.cloudinary.com/cwowd/image/upload/v1658934098/Quodd_Heroes_2nd_Edition_-_par_Wonderment_Games_txbkt0.jpg"
                     height="100%"
                     cover
                   >
@@ -57,7 +57,7 @@
             </v-card>
 
             <v-row dense class="posts_grid" v-for="post in response.data" :key="post.id">
-                <v-card class="mb-6 bg-grey-lighten-6">
+                <v-card class="mb-3 bg-grey-lighten-6">
                   <div class="card-grid">
                     <div>
                       <v-card-title class="text-wrap text-h6">
@@ -75,7 +75,7 @@
                       size="75"
                       rounded="0"
                     >
-                      <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+                      <v-img src="https://res.cloudinary.com/cwowd/image/upload/v1658934098/Quodd_Heroes_2nd_Edition_-_par_Wonderment_Games_txbkt0.jpg"
                       cover
                       ></v-img>
                     </v-avatar>
