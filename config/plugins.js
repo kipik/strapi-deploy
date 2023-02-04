@@ -9,6 +9,11 @@ module.exports = ({ env }) => ({
           params: {
             Bucket: env('DO_BUCKET')
           },
+          actionOptions: {
+            upload: {},
+            uploadStream: {},
+            delete: {},
+          }
         }
       },
     },
