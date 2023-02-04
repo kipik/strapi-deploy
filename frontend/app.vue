@@ -8,7 +8,6 @@
         <v-app-bar 
           elevation="2"
           color="teal-darken-4"
-          image="https://picsum.photos/1920/1080?random"
           density="compact"
         >
           <v-app-bar-title>Cwowd : le WiP</v-app-bar-title>
@@ -42,7 +41,7 @@
                   v-for="post in response.data" :key="post.id"
                 >
                   <v-sheet
-                    src="https://res.cloudinary.com/cwowd/image/upload/v1658934098/Quodd_Heroes_2nd_Edition_-_par_Wonderment_Games_txbkt0.jpg"
+                    src= {{ post.attributes.feature_image.attributes.url }}
                     height="100%"
                     cover
                   >
@@ -75,7 +74,7 @@
                       size="75"
                       rounded="0"
                     >
-                      <v-img src="https://res.cloudinary.com/cwowd/image/upload/v1658934098/Quodd_Heroes_2nd_Edition_-_par_Wonderment_Games_txbkt0.jpg"
+                      <v-img src="$post.attributes.feature_image.data.attributes.url"
                       cover
                       ></v-img>
                     </v-avatar>
@@ -92,13 +91,16 @@
 <script lang="ts">
 export default {
     data: () => ({ drawer: null }),
+    image: {
+    strapi: {}
+    }
   }
 </script>
 
 <script setup lang="ts">
 import type { Posts } from '~/types'
 const { find } = useStrapi()
-const response = await find<Post>('posts')
+const response = await find<Post>('posts?populate=*')
 
 // const query = gql`
   // query getPosts($limit: Int!) {
