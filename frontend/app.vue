@@ -1,45 +1,47 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <header>
-        <v-list>
-          <v-list-item>
-            <NuxtLink to="/">Home</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/jeux">Les jeux</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/campagnes">Les campagnes participatives</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/magazine">Le magazine</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/mon-profil">Mon Cwowd</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/professionnel">Accès pros</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/contact">Nous contacter</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="/privacy">Respect de la vie privée</NuxtLink>
-          </v-list-item>
-          <v-list-item>
-            <NuxtLink to="tou">Terms of Use</NuxtLink>
-          </v-list-item>
-        </v-list>
-      </header>
-      
-      <h3>Ceci est la :
-      <span>
-        <NuxtPage />
-      </span>
-      </h3>
-    </NuxtLayout>
-  </div>
+      <v-app id="inspire">
+          <div>
+            <NuxtLayout>
+              <!-- <Header /> -->
+                <v-list>
+                  <v-list-item>
+                    <NuxtLink to="/">Home</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/jeux">Les jeux</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/campagnes">Les campagnes participatives</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/magazine">Le magazine</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/mon-profil">Mon Cwowd</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/professionnel">Accès pros</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/contact">Nous contacter</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="/privacy">Respect de la vie privée</NuxtLink>
+                  </v-list-item>
+                  <v-list-item>
+                    <NuxtLink to="tou">Terms of Use</NuxtLink>
+                  </v-list-item>
+                </v-list>
+              
+              <h3>Ceci est la page :
+              <span>
+                <NuxtPage />
+              </span>
+              </h3>
+            </NuxtLayout>
+          </div>
+        <!-- </v-card> -->
+  </v-app>
 </template>
 
 <!-- <template>

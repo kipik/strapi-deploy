@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-// import { defineNuxtConfig } from 'nuxt'
+// import { defineNuxtConfig } from 'nuxt';
 import { resolve } from "path";
 
 export default defineNuxtConfig({
@@ -10,8 +10,8 @@ export default defineNuxtConfig({
   ],
   css: [
     'vuetify/lib/styles/main.sass',
-    // '@mdi/font/css/materialdesignicons.min.css',
-    "~/assets/main.scss"
+    '@mdi/font/css/materialdesignicons.min.css',
+    // "~/assets/main.scss"
   ],
   build: {
     transpile: ['vuetify'],
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   buildModules: [
       '@nuxtjs/vuetify'
   ],
-  alias: {
-    "@": resolve(__dirname, "/")
-  }
+  // alias: {
+  //   "@": resolve(__dirname, "/")
+  // },
 })
