@@ -1,5 +1,5 @@
-query GetPosts {
-  posts {
+query GetPosts($limit: Int = 10) {
+  posts (limit:$limit) {
     id
     attributes {
       title

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/strapi',
     '@nuxtjs/apollo',
+    // 'nuxt-graphql-client',
   ],
   css: [
     'vuetify/lib/styles/main.sass',
@@ -21,6 +22,11 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
   },
+  // runtimeConfig: {
+  //   public: {
+  //     GQL_HOST: 'https://walrus-app-sbjbt.ondigitalocean.app/graphql' // overwritten by process.env.GQL_HOST
+  //   }
+  // },
   apollo: {
     autoImports: true,
     authType: 'Bearer',

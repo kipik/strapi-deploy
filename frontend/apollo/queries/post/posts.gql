@@ -1,5 +1,5 @@
 # Write your query or mutation here
-query {
+query ApoGetPosts {
   posts {
     data {
       id
