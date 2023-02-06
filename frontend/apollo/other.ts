@@ -5,7 +5,6 @@ export default defineApolloClient({
   wsEndpoint: '',
   httpLinkOptions: {},
   wsLinkOptions: {},
-  wsEndpoint: '',
   websocketsOnly: false,
   connectToDevTools: false,
   defaultOptions: {},
