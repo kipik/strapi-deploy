@@ -1,7 +1,30 @@
 <template>
+  <div>
+    <NuxtLayout>
+      <header>
+        <ul>
+          <li>
+            <NuxtLink to="/">Home</NuxtLink>
+            <NuxtLink to="/jeux">Les jeux</NuxtLink>
+            <NuxtLink to="/campagnes">Les campagnes participatives</NuxtLink>
+            <NuxtLink to="/magazine">Le magazine</NuxtLink>
+            <NuxtLink to="/mon-profil">Mon Cwowd</NuxtLink>
+            <NuxtLink to="/professionnel">Accès pros</NuxtLink>
+            <NuxtLink to="/contact">Nous contacter</NuxtLink>
+            <NuxtLink to="/privacy">Respect de la vie privée</NuxtLink>
+            <NuxtLink to="tou">Terms of Use</NuxtLink>
+          </li>
+        </ul>
+      </header>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
+</template>
+
+<!-- <template>
   <v-app id="inspire">
-    <!-- <v-navigation-drawer v-model="drawer">
-    </v-navigation-drawer> -->
+   <v-navigation-drawer v-model="drawer">
+    </v-navigation-drawer>
 
     <v-card max-width="448" class="mx-auto" color="grey-lighten-8">
       <v-layout>
@@ -85,21 +108,26 @@
       </v-layout>
     </v-card>
   </v-app>
-</template>
+</template> -->
 
-<script lang="ts">
+<!-- <script lang="ts">
 export default {
     data: () => ({ drawer: null }),
     image: {
     strapi: {}
     }
   }
-</script>
+</script> -->
 
 <script setup lang="ts">
-import type { Posts } from '~/types'
-const { find } = useStrapi()
-const response = await find<Post>('posts?populate=*')
+// import type { Posts } from '~/types'
+// const { find } = useStrapi()
+// const response = await find<Post>('posts?populate=*')
+
+// const entries = await strapi.entityService.findMany('api::article.article', {
+//   populate: '*',
+// });
+// console.log('entries :' + entries) -->
 
 // console.log(response.data[0].attributes.feature_image.attributes.url)
 // const query = gql`
