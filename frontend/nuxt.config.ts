@@ -7,11 +7,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/strapi',
     '@nuxtjs/apollo',
-    // 'nuxt-graphql-client',
+    // 'nuxt-graphql-client', 
   ],
   css: [
     'vuetify/lib/styles/main.sass',
-    '@mdi/font/css/materialdesignicons.min.css',
+    // '@mdi/font/css/materialdesignicons.min.css',
     // "~/assets/main.scss"
   ],
   build: {

@@ -1,30 +1,64 @@
 <template>
     <div>Articles</div>
 
-    <p>Il y a {{ response.data.length || 0 }} articles.</p>
+    <p>Il y a {{ data.posts.data.length || 0 }} articles.</p>
 
+    <CardsPostShort 
+        v-for="post in data.posts.data"
+        :key="post.id"
+        :title="post.attributes.title"
+        :excerpt="post.attributes.excerpt"
+        :date="post.attributes.publish_date"
+    />
 </template>
 
-<script setup lang="ts">
+<!-- 
+!!! Requête fonctionnelle en restAPI
+ -->
+
+<!-- <script setup lang="ts">
 import type { Posts } from '~/types'
 const { find } = useStrapi()
 const response = await find<Post>('posts?populate=*')
+</script> -->
 
-// const entries = await strapi.entityService.findMany('api::article.article', {
-//   populate: '*',
-// });
-// console.log('entries :' + entries)
+<!-- 
+!!! Requête en graphql
+ -->
 
-// const Posts = gql`
-//   posts {
-//     data {
-//       id
-//       attributes {
-//         title
-//       }
-//     }
-//   }
-// `
+<script lang="ts" setup>
+type PostsData = {
+    posts: {
+        data: {
+            id: string,
+            title: string,
+            excerpt: string,
+            publish_date: string
+        }[]
+    }
+}
 
-// const { listPosts } = await useAsyncQuery(query)
+const query = gql`
+    query getAllPosts {
+        posts {
+            data {
+                attributes {
+                    publish_date
+                    title
+                    excerpt
+                    feature_image {
+                        data {
+                            attributes {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+`
+
+const { data } = await useAsyncQuery<PostsData>(query)
 </script>
