@@ -8,7 +8,9 @@
         :key="post.id"
         :title="post.attributes.title"
         :excerpt="post.attributes.excerpt"
-        :date="post.attributes.publish_date"
+        :date="post.attributes.publishedAt"
+        :id="post.id"
+        :vignette="post.attributes.feature_image.data"
     />
 </template>
 
@@ -30,10 +32,11 @@ const response = await find<Post>('posts?populate=*')
 type PostsData = {
     posts: {
         data: {
-            id: string,
-            title: string,
-            excerpt: string,
-            publish_date: string
+            id: String,
+            title: String,
+            excerpt: String,
+            date: String,
+            vignette: object
         }[]
     }
 }
@@ -42,8 +45,9 @@ const query = gql`
     query getAllPosts {
         posts {
             data {
+                id
                 attributes {
-                    publish_date
+                    publishedAt
                     title
                     excerpt
                     feature_image {

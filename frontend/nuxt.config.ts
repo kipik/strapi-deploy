@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/strapi',
     '@nuxtjs/apollo',
+    '@nuxt/image-edge',
     // 'nuxt-graphql-client', 
   ],
   css: [
@@ -58,6 +59,11 @@ export default defineNuxtConfig({
     cookie: {},
     cookieName: 'strapi_jwt'
     },
+  image: {
+    strapi: {
+      // baseURL: 'https://images-pour-strapi.fra1.digitaloceanspaces.com'
+    }
+  },
   buildModules: [
       '@nuxtjs/vuetify'
   ],
