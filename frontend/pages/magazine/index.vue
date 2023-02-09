@@ -43,11 +43,11 @@ const response = await find<Post>('posts?populate=*')
 <script lang="ts" setup>
 type PostsData = {
     posts: {
-            id: String,
-            title: String,
-            excerpt: String,
-            date: String,
-            image: String
+        id: String,
+        title: String,
+        excerpt: String,
+        date: String,
+        image: String
         }[]
     }
 

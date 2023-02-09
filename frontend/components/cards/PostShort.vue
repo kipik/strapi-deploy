@@ -46,7 +46,6 @@ const props = defineProps({
                 </v-card-actions>
             </div>
             <v-avatar
-                      class="ma-3"
                       size="75"
                       rounded="0"                      
             >
@@ -54,6 +53,8 @@ const props = defineProps({
                     fit="cover"
                     width="75"
                     height="75"
+                    class="rounded-s"
+                    
                 />
             </v-avatar>
         </div>
