@@ -2,6 +2,13 @@
     <div>Articles</div>
 
     <p>Il y a {{ data.posts.data.length || 0 }} articles.</p>
+    <br />
+
+    <!-- <v-card v-for="post in data.posts.data" :key="post.id">
+        <p>id: {{ post.id }} a pour image : {{ post.attributes.feature_image.data.attributes.url }}</p>
+    </v-card> -->
+
+    <!-- <p>{{ data.posts.data }}</p> -->
 
     <CardsPostShort 
         v-for="post in data.posts.data"
@@ -10,8 +17,13 @@
         :excerpt="post.attributes.excerpt"
         :date="post.attributes.publishedAt"
         :id="post.id"
-        :vignette="post.attributes.feature_image.data"
+        :image="post.attributes.feature_image.data.attributes.url"
     />
+
+    <!-- <h3>Avec image</h3>
+    <v-card v-for="post in data.posts.data" :key="post.id">
+        <p>id: {{ post.id }} a pour image : {{ post.attributes.feature_image.data.attributes.url }}</p>
+    </v-card> -->
 </template>
 
 <!-- 
@@ -31,15 +43,15 @@ const response = await find<Post>('posts?populate=*')
 <script lang="ts" setup>
 type PostsData = {
     posts: {
-        data: {
             id: String,
             title: String,
             excerpt: String,
             date: String,
-            vignette: object
+            image: String
         }[]
     }
-}
+
+// const image = post.attributes.feature_image.data.attributes.url
 
 const query = gql`
     query getAllPosts {

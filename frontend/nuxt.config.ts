@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 // import { defineNuxtConfig } from 'nuxt';
-import { resolve } from "path";
+// import { resolve } from "path";
 
 export default defineNuxtConfig({
   modules: [
@@ -61,8 +61,10 @@ export default defineNuxtConfig({
     },
   image: {
     strapi: {
-      // baseURL: 'https://images-pour-strapi.fra1.digitaloceanspaces.com'
-    }
+      baseURL: 'https://walrus-app-sbjbt.ondigitalocean.app/',
+    },
+    domains: ['https://images-pour-strapi.fra1.digitaloceanspaces.com/','https://walrus-app-sbjbt.ondigitalocean.app/']
+
   },
   buildModules: [
       '@nuxtjs/vuetify'

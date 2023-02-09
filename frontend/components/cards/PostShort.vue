@@ -5,9 +5,10 @@ const props = defineProps({
         type: String,
         required: true  
     },
-    vignette: {
-        type: Object,
-        required: false
+    image: {
+        type: String,
+        required: false,
+        default: ''
     },
     date: {
         type: String,
@@ -23,26 +24,40 @@ const props = defineProps({
     },
 })
 
+// const $img = useImage()
+// $img('vignette.attributes.url')
+
+
 // const smallImage = vignette.attributes.formats.small.url
 </script>
 
 <template>
-                <v-card class="mb-3 bg-grey-lighten-6">
-                    <div class="card-grid">
-                        <div>
-                        <v-card-title class="text-wrap text-h6">
-                            {{ title }}
-                        </v-card-title>
-                        <v-card-subtitle>{{ excerpt }}</v-card-subtitle>
-                        <p>Le {{ date }}</p>
-                        <v-card-actions>
-                            <v-btn color="primary" class="ms-2" size="x-small" variant="tonal">Plus d'infos</v-btn>
-                            <v-btn color="primary" class="ms-2" size="x-small" variant="outlined">On en discute</v-btn>
-                        </v-card-actions>
-                        </div>  
-                        <nuxt-img src="vignette.attributes.url"></nuxt-img>
-                    </div>
-                </v-card>
-
-                <!-- <p>{{ vignette.attributes.url }}</p> -->
+    <v-card>
+        <div class="card-grid">
+            <div>
+                <v-card-title>
+                    {{ title }}
+                </v-card-title>
+                <v-card-subtitle>{{ excerpt }}</v-card-subtitle>
+                <p>Le {{ date }}</p>
+                <v-card-actions>
+                    <v-btn color="primary" class="ms-2" size="x-small" variant="tonal">Plus d'infos</v-btn>
+                    <v-btn color="primary" class="ms-2" size="x-small" variant="outlined">On en discute</v-btn>
+                </v-card-actions>
+            </div>
+            <v-avatar
+                      class="ma-3"
+                      size="75"
+                      rounded="0"                      
+            >
+                <nuxt-img :src="image" 
+                    fit="cover"
+                    width="75"
+                    height="75"
+                />
+            </v-avatar>
+        </div>
+        <!-- <v-img :src="require(`${image}`)" /> -->
+    </v-card>
+        <!-- <p>{{ vignette.attributes.url }}</p> -->
 </template>
