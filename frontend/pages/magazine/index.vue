@@ -55,7 +55,7 @@ type PostsData = {
 
 const query = gql`
     query getAllPosts {
-        posts {
+        posts  (sort: "createdAt:desc", pagination: { limit: 5}) {
             data {
                 id
                 attributes {
