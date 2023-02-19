@@ -139,9 +139,8 @@
     },
     "auteur": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::member.member",
-      "inversedBy": "publications"
+      "relation": "oneToOne",
+      "target": "api::member.member"
     }
   }
 }

@@ -38,7 +38,6 @@ const props = defineProps({
                 <v-card-title>
                     {{ title }}
                 </v-card-title>
-                
                 <v-card-subtitle>{{ excerpt }}</v-card-subtitle>
                 <p>Le {{ date }}</p>
                 <v-card-actions>
