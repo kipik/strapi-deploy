@@ -136,6 +136,12 @@
         }
       },
       "type": "richtext"
+    },
+    "auteur": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::member.member",
+      "inversedBy": "publications"
     }
   }
 }

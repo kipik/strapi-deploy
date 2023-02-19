@@ -68,6 +68,12 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "user"
+    },
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "mappedBy": "user"
     }
   }
 }
