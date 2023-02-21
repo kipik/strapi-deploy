@@ -1,8 +1,0 @@
-query GetPosts($limit: Int = 5) {
-  posts (limit:$limit) {
-    id
-    attributes {
-      title
-    }
-  }
-}
