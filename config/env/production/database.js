@@ -1,3 +1,5 @@
+/* Version pour DigitalOcean */
+
 // path: ./config/database.js
 
 module.exports = ({ env }) => ({
@@ -17,4 +19,51 @@ module.exports = ({ env }) => ({
       debug: false,
     },
   });
+
+
+  */
+// path: ./config/env/production/database.js
+
+/* // path: ./config/env/production/database.js
+
+const { parse } = require("pg-connection-string");
+
+module.exports = ({ env }) => {
+  const { host, port, database, user, password } = parse(env("DATABASE_URL"));
   
+  return {
+    connection: {
+      client: 'postgres',
+      connection: {
+        host,
+        port,
+        database,
+        user,
+        password,
+        ssl: { rejectUnauthorized: false },
+      },
+      debug: false,
+    },
+  }
+};
+/* Version pour Heroku */
+// const { parse } = require("pg-connection-string");
+
+// module.exports = ({ env }) => {
+//   const { host, port, database, user, password } = parse(env("DATABASE_URL"));
+
+//   return {
+//     connection: {
+//       client: "postgres",
+//       connection: {
+//         host,
+//         port,
+//         database,
+//         user,
+//         password,
+//         ssl: { rejectUnauthorized: false },
+//       },
+//       debug: false,
+//     },
+//   };
+// };
